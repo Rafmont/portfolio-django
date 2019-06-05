@@ -1,0 +1,128 @@
+body {
+    background-image: url(../img/Fundo.jpg);
+    color: #FFEEBB;
+    font-size: 16px;
+    font-family: "Verdana", "Liberation", sans-serif;
+}
+
+a:link {
+    color: #FFEEBB;
+}
+
+a:visited {
+    color: #DDCC99;
+}
+
+a {
+    text-decoration: none;
+}
+
+header { display:block; margin-bottom: 1px;}
+nav { display:block; width:20%; float: left;}
+section { display: block; width: 77%; float:right;}
+
+ul, ol {
+    line-height: 200%;
+}
+
+nav ul {
+    color: #FFEEBB;
+    margin-top: 30px;
+    list-style-type: circle;
+}
+
+.ender {
+    text-align: right;
+    font-size: 16px;
+    line-height: 150%;
+    float: right;
+}
+
+.apres {
+    text-align: center;
+}
+
+.imgLogo {
+    margin-bottom: 6px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #FFEEBB;
+}
+
+.historia {
+    text-align: justify;
+}
+
+.imgesq {
+    margin: 12px, 12px, 4px, 0px;
+    float:left;
+    padding: 10px 10px 0px 10px;
+}
+
+.imgdir {
+    margin: 12px, 0px, 4px, 12px;
+    float:right;
+    padding: 10px 10px 0px 10px;
+}
+
+.fonte {
+    text-align: right;
+    font-style: italic;
+}
+
+.tabInfo {
+    border-collapse: collapse;
+    margin-top: 6px;
+    background-color: #FFFFFF;
+    color: #573218;
+    font-family: "Arial", "Ubuntu", sans-serif;
+}
+
+th, td {
+    border: 2px solid #664422;
+    padding: 6px, 12px, 6px, 12px;
+}
+
+.linTH {
+    color: #FFFFFF;
+    background-color: #907968;
+    vertical-align: middle;
+    text-align: center;
+}
+    
+.colTH {
+    color: #573218;
+    background-color: #EACEAC;
+    text-align: left;
+}
+
+.preco {
+    color: #CC0000;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+form {
+    float: right;
+}
+
+fieldset {
+    background-color: #907968;
+}
+
+.fsForm {
+    width: 524px;
+    clear: both;
+}
+
+.fsResDir {
+    width: 280px;
+    height: 280px;
+    float: right;
+}
+
+.fsResEsq {
+    width: 200px;
+    height: 280px;
+    float: left;
+}
+

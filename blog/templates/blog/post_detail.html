@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+                    
+                   
+<h4>{{ post.title }}</h4>
+<hr>
+<div class="card mt-4">
+    <div class="card-body">
+        <p class="mt-4" style="text-align: justify">{{ post.text|linebreaksbr }}</p>
+        <hr>
+        <small>{{ post.published_date }}</small>
+    </div>
+</div>
+<a href="/blog"><button class="btn btn-success mt-4">Voltar</button></a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,100 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Portfolio - Rafael Monteiro</title>
+        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+        <link rel="shortcut icon" href="img/favicon.ico">
+    </head>
+    <body>
+        <header>
+            <h1>Sou Rafael Monteiro, desenvolvedor web de Campos do Jordão. Atualmente graduando Análise e Desenvolvimento de Sistemas no IFSP.</h1>
+
+            <p class="social">
+                <a href="#" target="_blank"><img src="{% static 'blog/img/facebook-logo.png' %}" alt="logo facebook" width="52"></a>
+                &nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/rafael-ara%C3%BAjo-moreno-monteiro-647a17170/" target="_blank">
+                <img src="{% static 'blog/img/linkedin.png' %}" alt="logo linkedin" width="52"></a>
+                &nbsp;&nbsp;
+                <a href="/blog" target="_blank">
+                <img src="{% static 'blog/img/blog.png' %}" alt="logo blog" width="52"></a>
+            </p>
+        </header>
+        <section>
+            <div class="div1">
+                <p><img class="imgesq" src="{% static 'blog/img/html-logo.svg'%}" width="124" alt="logo html">Conhecimento no desenvolvimento web básico,
+                  já tendo realizado a estruturação de diversas páginas, bem como a criação de material didático para a disciplina de
+                  desenvolvimento web 1 (básico) aplicada no Instituto Federal de São Paulo, campus Campos do Jordão.
+                  <a href="html-basico/index.html" target="_blank">Clique para ver um exemplo.</a></p>
+            </div>
+            <br>
+            <div class="div2">
+                <img class="imgdir" src="{% static 'blog/img/controle-img.png'%}" alt="controle de videogame" width="124">
+                <p>Também desenvolvedor de jogos eletrônicos, com colaborações realizadas ao grupo de desenvolvimento de jogos do IFSP-CJO,
+                   para o projeto de um jogo que visa simular um ambiente de um restaurante fast-food cooperativo, utilizando a ferramenta
+                   <a href="https://www.scirra.com/construct2" target="_blank">Construct2</a>, onde o principal objetivo é o gerenciamento d
+                   recursos.</p>
+            </div>
+            <br>
+            <div class="div1">
+                <p> <img class="imgesq" src="{% static 'blog/img/phaser-logo.png'%}" alt="logo phaser.js" width="124">Existem também o trabalho paralelo
+                  com o desenvolvimento de jogos utilizando o framework Phaser.js para JavaScript, utilizando esta ferramenta é possível criar
+                  jogos de maneira simples para o ambiente web. <a href="https://rafmont.github.io/Phaser-Games/index.html" target="_blank">
+                  Clique para ver meus trabalhos.</a></p>
+            </div>
+            <br>
+            <div class="div2">
+                <img class="imgdir" src="{% static 'blog/img/manage.png'%}" alt="gerenciamento" width="124">
+                <p>Por fim participei de um projeto de extensão, que por sua vez tinha o objetivo de concientizar jovens do ensino público local
+                do uso adequado da internet, apresentando as boas práticas, ferramentas para se protegerem e os perigos que pairam sobre a rede.</p>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <h2 style="text-align: center">Meus projetos</h2>
+            {% for project in projects %}
+            <div class="div3">
+                <h3>{{ project.title}}</h3>
+                <hr>
+                <p>{{ project.text}}</p>
+                <br>
+                <p>Comecei a trabalhar no projeto em {{ project.begin_date }}</p>
+            </div>
+            <br>
+            {% endfor %}
+            <br>
+            <hr>
+            <br>
+            <h2 style="text-align: center">Cursos e formações</h2>
+            {% for formation in formations %}
+            <div class="div3">
+                <h3>{{ formation.name }}</h3>
+                <hr>
+                <p>{{ formation.description }}</p>
+                <p>Instituição: {{ formation.institution }}</p>
+                <p>Comecei em {{ formation.begin_date }} e terminei em {{ formation.end_date }}.</p>
+            </div>
+            <br>
+            {% endfor %}
+            <br>
+            <hr>
+            <br>
+            <h2 style="text-align: center">Por onde passei</h2>
+            {% for latest in latests %}
+            <div class="div3">
+                <h3>{{ latest.name }}</h3>
+                <hr>
+                <p>{{ latest.description }}</p>
+                <p>Instituição: {{ latest.institution }}</p>
+                <p>Comecei em {{ latest.begin_date }} e terminei em {{ latest.end_date }}.</p>
+            </div>
+            {% endfor %}
+        </section>
+        <footer>
+            <p>&copy; Rafael Monteiro, 2019</p>
+        </footer>
+    </body>
+</html>
